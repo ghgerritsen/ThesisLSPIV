@@ -4,7 +4,7 @@ Coding for MSc Thesis Flood Wave Monitoring using LSPIV - TU Delft
 Link:
 https://repository.tudelft.nl/islandora/object/uuid%3A5d856ba9-a207-4b61-8bb7-703322fe3154?collection=education
 
-This filder contains four example notebooks containing the (basics) of the coding used for my thesis. These notebooks are:
+This folder contains four example notebooks containing the (basics) of the coding used for my thesis. These notebooks are:
 
 - Part 1: Image preparation: lens distortion correction, 4-point orthorectification, gray scaling, contrast- and gamma correction. All using OpenCV;
 - Part 2: PIV processing: PIV processing using OpenPIV. In this method filtering is applied based on the signal-to-noise ratio;
