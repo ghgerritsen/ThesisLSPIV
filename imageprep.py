@@ -164,13 +164,14 @@ def orthorect_trans(img, M, C):
 
 def color_corr(img, alpha=None, beta=None, gamma=0.5):
     """
-    Grey scaling, contrast- and gamma correction
+    Grey scaling, contrast- and gamma correction. Both alpha and beta need to be
+    defined in order to apply contrast correction.
 
     Input:
     ------
     img - original image
     alpha - gain parameter for contrast correction (default: None)
-    beta - bias parameter for contrast correction(default: None)
+    beta - bias parameter for contrast correction (default: None)
     gamma - brightness parameter for gamma correction (default: 0.5)
 
     Output:
@@ -180,9 +181,9 @@ def color_corr(img, alpha=None, beta=None, gamma=0.5):
     # turn image into grey scale
     corr_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-    # if alpha and beta:
-    #     # apply contrast correction
-    #     corr_img = cv2.convertScaleAbs(corr_img, alpha=alpha, beta=beta)
+    if alpha and beta:
+        # apply contrast correction
+        corr_img = cv2.convertScaleAbs(corr_img, alpha=alpha, beta=beta)
 
     # apply gamma correction
     invGamma = 1./gamma
